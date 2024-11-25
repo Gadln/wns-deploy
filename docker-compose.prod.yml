@@ -3,7 +3,7 @@ version: '3'
 services:
   server:
     # build: ./server
-    image: dockerhub-username/DOCKER_HUB_SERVER_IMAGE_NAME
+    image: dockerhub-username/dockerhub-serveur-image-name
     command: sh -c "npm run build && npm run prod"
     expose:
       - 5000
@@ -14,7 +14,7 @@ services:
       - mongodb
   client:
     # build: ./client
-    image: DOCKER_HUB_USERNAME/DOCKER_HUB_CLIENT_IMAGE_NAME
+    image: dockerhub-username/dockerhub-client-image-name
     command: sh -c "npm run build"
     volumes:
       - web-client-build:/app/build
